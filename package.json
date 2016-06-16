@@ -21,6 +21,7 @@
     "brunch": "^2.4.0",
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.0.0",
+    "flux": "^2.1.1",
     "jasmine": "^2.4.1",
     "javascript-brunch": "^2.0.0",
     "jsenv-brunch": "^1.4.2",
