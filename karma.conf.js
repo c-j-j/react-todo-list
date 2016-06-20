@@ -4,8 +4,6 @@ module.exports = function(config) {
     frameworks: ['jasmine', 'es6-shim'],
     basePath: 'public',
     files: [
-      '../node_modules/jquery/dist/jquery.js',
-      '../node_modules/jasmine-jquery/lib/jasmine-jquery.js',
       'vendor.js',
       'app.js',
       'test.js',
@@ -14,6 +12,6 @@ module.exports = function(config) {
       '**/*.js': ['sourcemap']
     },
     colors: true,
-    reporters: ['dots'],
+    reporters: ['dots']
   })
 }
