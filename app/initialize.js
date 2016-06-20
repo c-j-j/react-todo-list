@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils'
 import React from 'react';

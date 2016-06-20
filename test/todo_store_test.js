@@ -17,4 +17,13 @@ describe('TodoStore', ()=> {
     todoStore.addItem('Hello')
     expect(todoStore.getAll()).toEqual([{id: 0,text: 'Hello'}])
   })
+
+  it('checks store via dispatcher', () => {
+    let myDispatcher = new TodoDispatcher()
+    let todoStore2 = new TodoStore(myDispatcher)
+
+    myDispatcher.addItem('store me')
+
+    expect(todoStore2.getAll()).toEqual([{id: 0, text: 'store me'}])
+  })
 })

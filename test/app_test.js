@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import React from 'react';
 import ReactDom from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
@@ -8,7 +9,7 @@ describe('TodoApp', ()=> {
   let todoApp
 
   beforeEach(()=>{
-    todoApp =  ReactDom.render(<App />, document.createElement('div'))
+    todoApp =  TestUtils.renderIntoDocument(<App />)
   })
 
   it('starts with an empty list', () => {
@@ -30,9 +31,15 @@ describe('TodoApp', ()=> {
     expect(todoApp.state.items).toEqual([])
   })
 
+  it('checks added element via the dom', () => {
+    submitNewItem(todoApp, 'new item')
+
+    expect(ReactDom.findDOMNode(todoApp.refs.todoList).textContent).toContain('new item')
+  })
+
   function submitNewItem(todoApp, text) {
     let input = todoApp.refs.input
-    input.value = 'new todo item'
+    input.value = text
     TestUtils.Simulate.change(input)
 
     let form = TestUtils.findRenderedDOMComponentWithTag(todoApp, 'form')

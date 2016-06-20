@@ -11,7 +11,6 @@ module.exports = {
       joinTo: 'app.css'
     }
   },
-
   conventions: {
     vendor: /(vendor|test|node_modules)[\\/]/
   },

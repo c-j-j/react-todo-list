@@ -74,9 +74,9 @@ export default class App extends React.Component {
     return (
       <div id="content">
         <input onChange={this.filterResults} value={this.state.searchQuery} placeholder="Filter TODOs"></input>
-        <TodoList todoDispatcher={this.todoDispatcher} items={this.filteredItems()} />
-        <form onSubmit={this.addItem}>
-          <input placeholder="Enter a TODO item" onChange={this.updateCurrentItem} value={this.state.currentItem} ref="input"></input>
+        <TodoList ref="todoList" todoDispatcher={this.todoDispatcher} items={this.filteredItems()} />
+        <form id="new-item-form" onSubmit={this.addItem}>
+          <input placeholder="Enter a TODO item" onChange={this.updateCurrentItem} value={this.state.currentItem} ref="input" id="new-item-input"></input>
           <button ref="button">Enter todo item</button>
         </form>
       </div>

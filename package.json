@@ -24,6 +24,7 @@
     "flux": "^2.1.1",
     "jasmine": "^2.4.1",
     "javascript-brunch": "^2.0.0",
+    "jquery": "3.0.0",
     "jsenv-brunch": "^1.4.2",
     "karma": "^0.13.22",
     "karma-es6-shim": "^1.0.0",
